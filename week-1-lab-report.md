@@ -7,12 +7,12 @@ The working directory was
 Having no arguments means that  
 
 3. Directory argument  
-![Image](cddirectoryarg.PNG)
+![Image](cddirectoryarg.PNG)  
 The working directory was  
 The directory argument  
 
 4. File argument  
-![Image](cdfilearg.PNG)
+![Image](cdfilearg.PNG)  
 The working directory was  
 The directory argument  
 
