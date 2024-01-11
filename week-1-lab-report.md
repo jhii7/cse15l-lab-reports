@@ -1,6 +1,6 @@
 # Week 1 Lab Report
 ## `cd` command
-![Image](cdnoargs.png)
+![Image](cdnoargs.PNG)
 1. No arguments  
 The working directory was  
 Having no arguments means that  
