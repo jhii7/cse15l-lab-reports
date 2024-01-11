@@ -12,3 +12,5 @@
 ```
 Hello World!
 ```
+\
+[Week 1 Lab Report](https://jhii7.github.io/cse15l-lab-reports/week-1-lab-report.html)
