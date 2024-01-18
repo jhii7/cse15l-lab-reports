@@ -3,7 +3,6 @@ import java.net.URI;
 import java.util.ArrayList;
 
 class Handler implements URLHandler {
-    int num = 0;
     ArrayList<String> something = new ArrayList<String>();
 
     public String handleRequest(URI url) {
