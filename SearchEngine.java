@@ -12,7 +12,7 @@ class Handler implements URLHandler {
             return somethingList;
         } else if (url.getPath().contains("/add")) {
                 String[] parameters = url.getQuery().split("=");
-                if (parameters[0].equals("pineapple")) {
+                if (parameters[1].equals("pineapple")) {
                     something.add("pineapple");
                     return String.format("pineapple");
                 }
@@ -20,11 +20,11 @@ class Handler implements URLHandler {
                     something.add("apple");
                     return String.format("apple");
                 }
-                if (parameters[2].equals("greenapple")) {
+                if (parameters[1].equals("greenapple")) {
                     something.add("green apple");
                     return String.format("green apple");
                 }
-                if (parameters[3].equals("banana")) {
+                if (parameters[1].equals("banana")) {
                     something.add("banana");
                     return String.format("banana");
                 }
