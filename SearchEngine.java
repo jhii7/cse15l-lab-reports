@@ -1,39 +1,41 @@
 import java.io.IOException;
 import java.net.URI;
+import java.util.ArrayList;
 
 class Handler implements URLHandler {
     int num = 0;
-    String[] something;
-    String nothing = {"Nothing here"};
+    ArrayList<String> something = new ArrayList<String>();
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            return String.format("Number: %d", num);
-        } else if (url.getPath().equals("/increment")) {
-            num += 1;
-            return String.format("Number incremented!");
+            String somethingList = String.join(", ", something);
+            return somethingList;
         } else if (url.getPath().contains("/add")) {
                 String[] parameters = url.getQuery().split("=");
-                if (parameters[0].equals("count")) {
-                    num += Integer.parseInt(parameters[1]);
-                    return String.format("Number increased by %s! It's now %d", parameters[1], num);
-                }
-                if (parameters[1].equals("pineapple")) {
+                if (parameters[0].equals("pineapple")) {
+                    something.add("pineapple");
                     return String.format("pineapple");
                 }
-                if (parameters[2].equals("apple")) {
+                if (parameters[1].equals("apple")) {
+                    something.add("apple");
                     return String.format("apple");
                 }
-            }
-            return "404 Not Found!";
+                if (parameters[2].equals("greenapple")) {
+                    something.add("green apple");
+                    return String.format("green apple");
+                }
+                if (parameters[3].equals("banana")) {
+                    something.add("banana");
+                    return String.format("banana");
+                }
         } else if (url.getPath().contains("/search")) {
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("app")) {
-                    return parameters;
+                    return String.format("ADD SOMETHING HERE");
                 }
-            }
         }
-    }
+            return "404 Not Found!";
+        }
 }
 
 class SearchEngine {
