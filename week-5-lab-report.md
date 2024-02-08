@@ -80,6 +80,8 @@ $ find -name chapter-2.txt
 
 This prints the path to the named file, chapter-2.txt. Both of these commands are useful for finding the path that a certain file resides in.
 
+[Source](https://man7.org/linux/man-pages/man1/find.1.html)
+
 <ins> Using the -maxdepth argument: </ins>
 
 ```
@@ -98,6 +100,8 @@ $ find -maxdepth 1
 ```
 
 This argument specifies that we descend 1 directory below our working directory, and print the specified directories. Since we are descending by 1, we can print out the directories that are inside of techincal.
+
+[Source](https://man7.org/linux/man-pages/man1/find.1.html)
 
 <ins> Using the -maxdepth argument: </ins>
 
@@ -127,6 +131,8 @@ $ find -size 2k
 
 The argument 2k specifies that we are searching for files of size < 2k kibibytes (2048 bytes).
 
+[Source](https://man7.org/linux/man-pages/man1/find.1.html)
+
 <ins> Using the -type argument: </ins>
 
 ```
@@ -145,9 +151,12 @@ $ find -type d
 ```
 Using the argument d, we are searching for directories under the working directory.
 
+
+
 ```
 $ find -type c
 
 ```
 Using the argument c, we are searching for characters under the working directory. Since there are no characters, we do not print anythiing. 
 
+[Source](https://man7.org/linux/man-pages/man1/find.1.html)
