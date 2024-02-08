@@ -64,18 +64,90 @@ static void reverseInPlace(int[] arr) {
 ## Part 2 - Researching Commands
 I am interested about learning more about the `find` command.
 
-Using the -name argument:
+<ins> Using the -name argument: </ins>
 
 ```
 $ find -name chapter-1.txt
 ./911report/chapter-1.txt
 ```
 
+This prints the path to the named file, chapter-1.txt. 
+
 ```
 $ find -name chapter-2.txt
 ./911report/chapter-2.txt
 ```
 
+This prints the path to the named file, chapter-2.txt. Both of these commands are useful for finding the path that a certain file resides in.
 
+<ins> Using the -maxdepth argument: </ins>
 
+```
+$ find -maxdepth 0
+.
+```
+This argument specifies that we descend 0 directories below our working directory, and print the specified directories. Since we are not descending, we print our working directory of techinical - 0.
+
+```
+$ find -maxdepth 1
+.
+./911report
+./biomed
+./government
+./plos
+```
+
+This argument specifies that we descend 1 directory below our working directory, and print the specified directories. Since we are descending by 1, we can print out the directories that are inside of techincal.
+
+<ins> Using the -maxdepth argument: </ins>
+
+```
+$ find -size 1k
+./plos/pmed.0020191.txt
+./plos/pmed.0020226.txt
+```
+The argument 1k specifies that we are searching for files of size < 1 kibibytes (1024 bytes).
+
+```
+$ find -size 2k
+./government/Media/Campaign_Pays.txt
+./government/Media/Court_Keeps_Judge_From.txt
+./government/Media/Fire_Victims_Sue.txt
+./government/Media/It_Pays_to_Know.txt
+./government/Media/Justice_requests.txt
+./government/Media/Lawyer_Web_Survey.txt
+./government/Media/Self-Help_Website.txt
+./plos/pmed.0020028.txt
+./plos/pmed.0020048.txt
+./plos/pmed.0020082.txt
+./plos/pmed.0020120.txt
+./plos/pmed.0020157.txt
+./plos/pmed.0020192.txt
+```
+
+The argument 2k specifies that we are searching for files of size < 2k kibibytes (2048 bytes).
+
+<ins> Using the -type argument: </ins>
+
+```
+$ find -type d
+.
+./911report
+./biomed
+./government
+./government/About_LSC
+./government/Alcohol_Problems
+./government/Env_Prot_Agen
+./government/Gen_Account_Office
+./government/Media
+./government/Post_Rate_Comm
+./plos
+```
+Using the argument d, we are searching for directories under the working directory.
+
+```
+$ find -type c
+
+```
+Using the argument c, we are searching for characters under the working directory. Since there are no characters, we do not print anythiing. 
 
