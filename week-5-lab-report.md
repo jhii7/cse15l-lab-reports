@@ -22,14 +22,7 @@ However, the JUnit test below passes. We input the array `{ 3 }`.
 ```
 Our JUnit output is as follows:
 
-```
-$ bash test.sh
-JUnit version 4.13.2
-.....
-Time: 0.022
-
-OK (5 tests)
-```
+![Image](successtest.PNG)
 
 A failure-inducing input, `{ 1, 2, 3, 4, 5 }` is shown here:
 
@@ -48,23 +41,7 @@ A failure-inducing input, `{ 1, 2, 3, 4, 5 }` is shown here:
 
 Our JUnit output is as follows:
 
-```
-$ bash test.sh
-JUnit version 4.13.2
-.E.....
-Time: 0.037
-There was 1 failure:
-1) testRIP2(ArrayTests)
-java.lang.AssertionError: expected:<2> but was:<4>
-        at org.junit.Assert.fail(Assert.java:89)
-        at org.junit.Assert.failNotEquals(Assert.java:835) 
-        at org.junit.Assert.assertEquals(Assert.java:647)  
-        at org.junit.Assert.assertEquals(Assert.java:633)  
-        at ArrayTests.testRIP2(ArrayTests.java:26)
-
-FAILURES!!!
-Tests run: 6,  Failures: 1
-```
+![Image](failtest.PNG)
 
 We expect the reversed array to look like this: ` { 5, 4, 3, 2, 1 } `
 
@@ -85,7 +62,19 @@ static void reverseInPlace(int[] arr) {
 ```
 
 ## Part 2 - Researching Commands
+I am interested about learning more about the `find` command.
 
+Using the -name argument:
+
+```
+$ find -name chapter-1.txt
+./911report/chapter-1.txt
+```
+
+```
+$ find -name chapter-2.txt
+./911report/chapter-2.txt
+```
 
 
 
