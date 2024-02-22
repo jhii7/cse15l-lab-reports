@@ -16,3 +16,4 @@ Hello World!
 [Week 1 Lab Report](https://jhii7.github.io/cse15l-lab-reports/week-1-lab-report.html)  
 [Week 3 Lab Report](https://jhii7.github.io/cse15l-lab-reports/week-3-lab-report.html)  
 [Week 5 Lab Report](https://jhii7.github.io/cse15l-lab-reports/week-5-lab-report.html)  
+[Week 7 Lab Report](https://jhii7.github.io/cse15l-lab-reports/week-7-lab-report.html)  
